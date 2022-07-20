@@ -7,12 +7,13 @@ public abstract class Piece {
 	
 	public Piece(Board board) {
 		this.board = board;
+		position = null;
 	}
 
 	protected Board getBoard() {
 		return board;
 	}
-
+	
 	public abstract boolean[][] possibleMoves();
 	
 	public boolean possibleMove(Position position) {
@@ -30,5 +31,4 @@ public abstract class Piece {
 		}
 		return false;
 	}
-	
 }
